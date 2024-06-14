@@ -18,7 +18,6 @@ window.addEventListener('load', () => {
     });
 });
 
-
 // animation timeline
 const animationTimeline = () => {
     // split chars that needs to be animated individually
@@ -270,3 +269,32 @@ const animationTimeline = () => {
         tl.restart();
     });
 }
+
+// Draggable hat functionality
+const hat = document.querySelector('.draggable');
+
+let offsetX, offsetY;
+let isDragging = false;
+
+hat.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - hat.getBoundingClientRect().left;
+    offsetY = e.clientY - hat.getBoundingClientRect().top;
+    hat.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    hat.style.cursor = 'grab';
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        hat.style.position = 'absolute';
+        hat.style.left = `${e.clientX - offsetX}px`;
+        hat.style.top = `${e.clientY - offsetY}px`;
+    }
+});
+
+hat.style.cursor = 'grab';
+
