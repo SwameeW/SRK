@@ -90,10 +90,9 @@ body {
   display: inline-block;
 }
 
-.idea-6 span{
+.idea-6 span {
   font-size: 15rem;
 }
-
 
 .six {
   position: relative;
@@ -105,13 +104,11 @@ body {
   display: inline-block;
   height: 500px;
   max-width: 100%;
-  /* height: auto; */
 }
 
 .six .hat {
   left: 41.5%;
   position: absolute;
-  /* transform: scale(0.1); */
   top: -35%;
   width: 80px;
   cursor: grab;
@@ -256,6 +253,18 @@ body {
     width: 90%;
   }
 
+  .one {
+    font-size: 2rem;
+  }
+
+  .two {
+    font-size: 0.8rem;
+  }
+
+  .three {
+    font-size: 1.5rem;
+  }
+
   .four .text-box {
     width: 90%;
   }
@@ -274,20 +283,19 @@ body {
   }
 
   .six .hat {
-    /* top: -20px; */
+    top: -20px;
     width: 50px;
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
 
   .wish h5 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: 1.2rem;
   }
 }
